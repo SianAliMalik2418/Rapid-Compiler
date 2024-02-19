@@ -1,0 +1,64 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.linkItems::after{
+     content: " ";
+     position: absolute;
+     display: block;
+     background-color: white;
+     width: 0%;
+     height: 2px;
+     transition: 0.3s all ease-in-out;
+}
+
+.linkItems:hover:after{
+  width: 100%;
+}
+
+
+
+.CodeMirror{
+  height: 400px !important;
+  background-color: #1C1C1C !important;
+  color: white !important;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.CodeMirror-gutters{
+  background-color: #1C1C1C !important;
+}
+
+.CodeMirror-line > span{
+  margin-left: 5px;
+}
+
+.loader{
+  animation: loading .5s linear infinite;
+}
+
+@keyframes loading {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+
